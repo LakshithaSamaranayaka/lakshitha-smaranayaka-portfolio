@@ -8,10 +8,9 @@ function Hero() {
             Software Engineering Undergraduate
           </p>
 
-          <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
-            Hi, I&apos;m{" "}
+          <h1 className="hero-name text-5xl md:text-7xl font-bold text-white leading-tight">Fullstack{" "}
             <span className="text-purple-400">
-              Lakshitha Samaranayaka
+               Developer
             </span>
           </h1>
 
