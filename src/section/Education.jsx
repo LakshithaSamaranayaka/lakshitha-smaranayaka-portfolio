@@ -1,3 +1,6 @@
+import postmanCertificate from "../assets/postman.png";
+import cloudCertificate from "../assets/cloud.png";
+
 function Education() {
   return (
     <section className="max-w-6xl mx-auto px-6 py-20">
@@ -42,6 +45,12 @@ function Education() {
             Covered API basics, HTTP methods, request and response handling,
             REST API testing, and using Postman to test and debug API requests.
           </p>
+
+          <img
+            src={postmanCertificate}
+            alt="Introduction to Postman API Certificate"
+            className="w-full h48 object-cover rounded-x1 mb-5 border border-white/10"
+          />
         </div>
 
         <div className="bg-white/10 border border-white/10 rounded-2xl p-6">
@@ -55,6 +64,12 @@ function Education() {
             Covered cloud API fundamentals, REST API concepts, authentication
             basics, and using APIs to connect applications with cloud services.
           </p>
+
+          <img
+            src={cloudCertificate}
+            alt="Introduction to Cloud APIs Certificate"
+            className="w-full h48 object-cover rounded-x1 mb-5 border border-white/10"
+          />
         </div>
       </div>
     </section>

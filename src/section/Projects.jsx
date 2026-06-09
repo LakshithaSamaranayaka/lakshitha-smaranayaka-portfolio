@@ -60,6 +60,37 @@ function Projects() {
       ],
       github: "https://github.com/LakshithaSamaranayaka/Uni-hub-connect-to-campus",
     },
+
+    {
+  title: "Graphite Noir",
+  type: "Individual Project",
+  duration: "Jun 2026 - Present",
+  description:
+    "A premium full-stack pencil art portfolio website created to upload, organize, and showcase my own graphite drawings. The platform allows users to view artworks in a responsive gallery with detailed artwork pages and social media integration.",
+  features: [
+    "Responsive artwork gallery with category filtering",
+    "Artwork detail pages for full-size image viewing",
+    "Admin artwork upload system",
+    "REST APIs using Node.js and Express.js",
+    "MongoDB-based artwork storage using Mongoose",
+    "Premium dark UI design with Tailwind CSS",
+    "Social media integration for Instagram, Facebook, and Threads",
+    "Frontend and backend deployment using Vercel",
+  ],
+  tech: [
+    "React.js",
+    "Vite",
+    "Tailwind CSS",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Mongoose",
+    "REST APIs",
+    "Vercel",
+  ],
+  github: "https://github.com/LakshithaSamaranayaka/Art-Gallery-Portfolio",
+  live: "https://art-gallery-portfolio-weld.vercel.app/"
+},
   ];
 
   return (
@@ -108,7 +139,7 @@ function Projects() {
             </ul>
 
             <h4 className="text-white font-semibold mb-3">Technologies</h4>
-            <div className="flex flex-wrap gap-2 mb-6">
+            <div className="flex flex-wrap gap-3 mb-6">
               {project.tech.map((item) => (
                 <span
                   key={item}
@@ -122,10 +153,21 @@ function Projects() {
             <a
               href={project.github}
               target="_blank"
-              className="inline-flex items-center text-purple-400 font-semibold hover:text-purple-300"
+              className="flex items-center text-purple-400 font-semibold hover:text-purple-300 w-fit"
             >
               View Source Code →
             </a>
+
+            {project.live && (
+              <a
+                href={project.live}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center text-purple-400 font-semibold hover:text-purple-300 mt-3 w-fit"
+              >
+                View Live Demo →
+              </a>
+            )}
           </div>
         ))}
       </div>

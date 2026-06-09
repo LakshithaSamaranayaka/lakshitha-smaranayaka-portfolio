@@ -1,7 +1,13 @@
+import backgroundImage from "../assets/background.jpg";
 function Hero() {
   return (
-    <section className="min-h-screen flex items-center max-w-6xl mx-auto px-6 pt-24">
-      <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
+    <section
+         className="min-h-screen flex items-center bg-cover bg-center bg-no-repeat px-6 pt-24"
+  style={{
+    backgroundImage: `linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), url(${backgroundImage})`,
+  }}
+>
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center w-full">
         {/* Left Content */}
         <div>
           <p className="text-purple-400 font-semibold mb-4">
@@ -77,7 +83,7 @@ function Hero() {
 
               <pre className="text-sm text-gray-300 overflow-x-auto">
                 <code>{`const developer = {
-  name: "Lakshitha",
+  name: "Lakshitha Samaranayaka",
   role: "Full-Stack Developer Intern",
   stack: ["React", "Node", "Express", "MongoDB"],
   focus: "Building real-world software",

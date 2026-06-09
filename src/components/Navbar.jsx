@@ -41,13 +41,13 @@ function Navbar() {
         showNavbar ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-6 lg:px-12">
+      <nav className="w-full mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
           <a
             href="#home"
             className="text-2xl font-bold tracking-wide text-purple-400"
           >
-            Lakshitha
+            Lakshitha Samaranayaka
           </a>
 
           <div className="hidden md:flex items-center gap-10">
