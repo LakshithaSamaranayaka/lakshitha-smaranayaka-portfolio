@@ -93,7 +93,7 @@ function About() {
 
             <div className="flex items-end justify-between">
               <div>
-                <h4 className="text-3xl font-black text-white">2+</h4>
+                <h4 className="text-3xl font-black text-white">3+</h4>
                 <p className="mt-2 text-sm font-semibold text-gray-300">
                   Total Projects
                 </p>
