@@ -14,13 +14,13 @@ function Hero() {
             Software Engineering Undergraduate
           </p>
 
-          <h1 className="hero-name text-5xl md:text-7xl font-bold text-white leading-tight">Fullstack{" "}
+          <h1 className="hero-title text-5xl md:text-7xl font-bold">Fullstack{" "}
             <span className="text-purple-400">
                Developer
             </span>
           </h1>
 
-          <p className="mt-6 text-gray-300 text-lg leading-8 max-w-2xl">
+          <p className="hero-description">
             I build full-stack web applications using React.js, Node.js,
             Express.js, MongoDB, REST APIs, and modern web technologies. I am
             passionate about building scalable, responsive, and real-world

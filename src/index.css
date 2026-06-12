@@ -76,6 +76,10 @@ body::before {
 }
 
 .about-text {
+  max-width: 600px;
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
+  line-height: 1.6;
+  overflow-wrap: break-word;
   opacity: 0;
   transform: translateY(25px);
   animation: fadeUpAbout 0.8s ease forwards;
@@ -196,5 +200,101 @@ body::before {
 
   50% {
     transform: translate(-40px, 30px);
+  }
+}
+/* ===== Mobile Hero Fix ===== */
+
+section {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.hero,
+.hero-section,
+#home {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Main name */
+.hero-name {
+  font-size: clamp(1.8rem, 8vw, 3rem);
+  line-height: 1.2;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+/* Big title: Fullstack Developer */
+.hero-title,
+h1 {
+  font-size: clamp(2.4rem, 12vw, 4.5rem);
+  line-height: 1.1;
+  max-width: 100%;
+  white-space: normal !important;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+/* Description paragraph */
+.hero-description,
+.hero p {
+  max-width: 100%;
+  font-size: clamp(1rem, 4.5vw, 1.25rem);
+  line-height: 1.6;
+  white-space: normal !important;
+  overflow-wrap: break-word;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Code card */
+.code-card,
+.code-window,
+pre {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+pre,
+code {
+  white-space: pre-wrap !important;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Mobile only */
+@media (max-width: 640px) {
+  .hero,
+  .hero-section,
+  #home {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .hero-title,
+  h1 {
+    font-size: 3rem !important;
+    line-height: 1.1;
+  }
+
+  .hero-description,
+  .hero p {
+    font-size: 1.05rem;
+  }
+
+  .hero-buttons {
+    width: 100%;
+  }
+
+  .code-card,
+  .code-window {
+    margin-top: 32px;
   }
 }
