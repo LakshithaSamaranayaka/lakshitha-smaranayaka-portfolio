@@ -94,22 +94,21 @@ function Projects() {
   ];
 
   return (
-    <section className="max-w-6xl mx-auto px-6 py-20">
-      <div className="mb-12">
-        <p className="text-purple-400 font-semibold mb-3">Portfolio</p>
+    <section className="min-h-screen max-w-6xl mx-auto px-6 py-20 flex flex-col items-center justify-center">
+      <div className="mb-12 text-center">
         <h2 className="text-4xl font-bold text-white">Featured Projects</h2>
-        <p className="text-gray-300 mt-4 max-w-2xl">
+        <p className="text-gray-300 mt-4 text-lg max-w-2xl mx-auto">
           These projects show my experience in full-stack development, REST APIs,
           authentication, databases, real-time features, and responsive web
           application design.
         </p>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-8">
+      <div className="w-full flex flex-wrap gap-8 justify-center">
         {projects.map((project) => (
           <div
             key={project.title}
-            className="bg-white/10 border border-white/10 rounded-3xl p-6 hover:border-purple-400/60 transition"
+            className="w-full  lg:w-[calc(50%-1rem)] max-w-[660px] bg-white/10 border border-white/10 rounded-3xl p-6 hover:border-purple-400/60 transition"
           >
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-5">
               <div>
@@ -124,14 +123,14 @@ function Projects() {
               </span>
             </div>
 
-            <p className="text-gray-300 leading-7 mb-6">
+            <p className="text-gray-300 leading-7 mb-6 text-lg">
               {project.description}
             </p>
 
             <h4 className="text-white font-semibold mb-3">Key Features</h4>
             <ul className="space-y-2 mb-6">
               {project.features.map((feature) => (
-                <li key={feature} className="text-gray-300 text-sm">
+                <li key={feature} className="text-gray-300 text-lg">
                   <span className="text-purple-400 mr-2">▹</span>
                   {feature}
                 </li>
