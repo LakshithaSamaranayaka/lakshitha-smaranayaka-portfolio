@@ -2,13 +2,24 @@ import postmanCertificate from "../assets/postman.png";
 import cloudCertificate from "../assets/cloud.png";
 import mongodbCertificate from "../assets/mongo1.png";
 import mongodb1Certificate from "../assets/mongo.png";
+import { motion }  from "framer-motion"
 
 function Education() {
   return (
     <section className="w-full max-w-6xl mx-auto px-6 py-20 flex flex-col items-center justify-center">
       <h2 className="text-4xl font-bold text-white mb-8">Education</h2>
 
-      <div className="w-full max-w-4xl bg-white/10 border border-white/10 rounded-2xl p-6 mb-6">
+      <motion.div 
+            initial={{opacity: 0, y:40 }}
+            whileInView={{ opacity: 1, y:0 }}
+            transition={{duration: 0.1, ease: "easeOut"}}
+            viewport={{once: true, amount: 0.2}}
+            whileHover={{ 
+              y: -10, 
+              scale: 1.03, 
+              boxShadow: "0 20px 40px rgba(168, 85, 247, 0.35)"
+            }}
+          className="w-full max-w-4xl bg-white/10 border border-white/10 rounded-2xl p-6 mb-6">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
           <div>
             <h3 className="text-2xl font-semibold text-white">
@@ -31,12 +42,22 @@ function Education() {
           Currently focused on MERN stack development, REST APIs, authentication,
           and real-world software projects.
         </p>
-      </div>
+      </motion.div>
 
       <h3 className="text-3xl font-bold text-white mb-8 mt-16">Certifications</h3>
 
       <div className="grid md:grid-cols-2 gap-6">
-        <div className="w-full max-w-[620px] bg-white/10 border border-white/10 rounded-2xl p-6 items-center justify-center">
+        <motion.div
+            initial={{opacity: 0, y:40 }}
+            whileInView={{ opacity: 1, y:0 }}
+            transition={{duration: 0.1, ease: "easeOut"}}
+            viewport={{once: true, amount: 0.2}}
+            whileHover={{ 
+              y: -10, 
+              scale: 1.03, 
+              boxShadow: "0 20px 40px rgba(168, 85, 247, 0.35)"
+            }}
+         className="w-full max-w-[620px] bg-white/10 border border-white/10 rounded-2xl p-6 items-center justify-center">
           <h4 className="text-xl font-semibold text-white">
             Introduction to Postman API
           </h4>
@@ -53,9 +74,19 @@ function Education() {
             alt="Introduction to Postman API Certificate"
             className="w-full h48 object-cover rounded-x1 mb-5 border border-white/10"
           />
-        </div>
+        </motion.div>
 
-        <div className="w-full max-w-[620px] bg-white/10 border border-white/10 rounded-2xl p-6">
+        <motion.div 
+            initial={{opacity: 0, y:40 }}
+            whileInView={{ opacity: 1, y:0 }}
+            transition={{duration: 0.1, ease: "easeOut"}}
+            viewport={{once: true, amount: 0.2}}
+            whileHover={{ 
+              y: -10, 
+              scale: 1.03, 
+              boxShadow: "0 20px 40px rgba(168, 85, 247, 0.35)"
+            }}
+        className="w-full max-w-[620px] bg-white/10 border border-white/10 rounded-2xl p-6">
           <h4 className="text-xl font-semibold text-white">
             Introduction to Cloud APIs
           </h4>
@@ -72,9 +103,19 @@ function Education() {
             alt="Introduction to Cloud APIs Certificate"
             className="w-full h48 object-cover rounded-x1 mb-5 border border-white/10"
           />
-        </div>
+        </motion.div>
 
-        <div className="w-full max-w-[620px] bg-white/10 border border-white/10 rounded-2xl p-6 items-center justify-center">
+        <motion.div 
+            nitial={{opacity: 0, y:40 }}
+            whileInView={{ opacity: 1, y:0 }}
+            transition={{duration: 0.1, ease: "easeOut"}}
+            viewport={{once: true, amount: 0.2}}
+            whileHover={{ 
+              y: -10, 
+              scale: 1.03, 
+              boxShadow: "0 20px 40px rgba(168, 85, 247, 0.35)"
+            }}        
+            className="w-full max-w-[620px] bg-white/10 border border-white/10 rounded-2xl p-6 items-center justify-center">
           <h4 className="text-xl font-semibold text-white">
             MongoDB Schema Design Patterns and Anti-patterns
           </h4>
@@ -90,8 +131,19 @@ function Education() {
             alt="Introduction to Postman API Certificate"
             className="w-full h48 object-cover rounded-x1 mb-5 border border-white/10"
           />
-        </div>
-        <div className="w-full max-w-[620px] bg-white/10 border border-white/10 rounded-2xl p-6 items-center justify-center">
+        </motion.div>
+
+        <motion.div 
+            initial={{opacity: 0, y:40 }}
+            whileInView={{ opacity: 1, y:0 }}
+            transition={{duration: 0.1, ease: "easeOut"}}
+            viewport={{once: true, amount: 0.2}}
+            whileHover={{ 
+              y: -10, 
+              scale: 1.03, 
+              boxShadow: "0 20px 40px rgba(168, 85, 247, 0.35)"
+            }}
+        className="w-full max-w-[620px] bg-white/10 border border-white/10 rounded-2xl p-6 items-center justify-center">
           <h4 className="text-xl font-semibold text-white">
            Relational Model (SQL) to MongoDB's Document Model
           </h4>
@@ -107,7 +159,7 @@ function Education() {
             alt="Introduction to Postman API Certificate"
             className="w-full h48 object-cover rounded-x1 mb-5 border border-white/10"
           />
-        </div>
+        </motion.div>
         
       </div>
     </section>

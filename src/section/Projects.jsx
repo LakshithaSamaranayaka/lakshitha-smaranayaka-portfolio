@@ -1,3 +1,5 @@
+import {motion} from "framer-motion";
+
 function Projects() {
   const projects = [
     {
@@ -141,9 +143,18 @@ function Projects() {
 
       <div className="w-full flex flex-wrap gap-8 justify-center">
         {projects.map((project) => (
-          <div
+          <motion.div
             key={project.title}
-            className="w-full  lg:w-[calc(50%-1rem)] max-w-[660px] bg-white/10 border border-white/10 rounded-3xl p-6 hover:border-purple-400/60 transition"
+            initial={{opacity: 0, y:40 }}
+            whileInView={{ opacity: 1, y:0 }}
+            transition={{duration: 0.1, ease: "easeOut"}}
+            viewport={{once: true, amount: 0.2}}
+            whileHover={{ 
+              y: -10, 
+              scale: 1.03, 
+              boxShadow: "0 20px 40px rgba(168, 85, 247, 0.35)"
+            }}
+            className="w-full  lg:w-[calc(50%_-_1rem)] max-w-[660px] group bg-white/10 border border-white/10 rounded-3xl p-6 hover:border-purple-400/60 transition-all duration-300"
           >
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-5">
               <div>
@@ -212,7 +223,7 @@ function Projects() {
                 View Live Demo →
               </a>
             )}
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
