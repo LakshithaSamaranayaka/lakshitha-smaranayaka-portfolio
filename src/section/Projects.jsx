@@ -158,14 +158,14 @@ function Projects() {
               </span>
             </div>
 
-            <p className="text-gray-300 leading-7 mb-6 text-lg">
+            <p className="text-gray-300 leading-7 mb-6 text-10px">
               {project.description}
             </p>
 
             <h4 className="text-white font-semibold mb-3">Key Features</h4>
             <ul className="space-y-2 mb-6">
               {project.features.map((feature) => (
-                <li key={feature} className="text-gray-300 text-lg">
+                <li key={feature} className="text-gray-300 text-sm">
                   <span className="text-purple-400 mr-2">▹</span>
                   {feature}
                 </li>
