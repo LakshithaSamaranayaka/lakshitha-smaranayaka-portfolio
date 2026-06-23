@@ -32,6 +32,8 @@ function Projects() {
       ],
       github:
         "https://github.com/LakshithaSamaranayaka/Auto-Bid-Lanka-Auction-Based-Platform-Final-year-Project-",
+      researchpaper: 
+        "https://liveplymouthac-my.sharepoint.com/:b:/g/personal/10952452_students_plymouth_ac_uk/IQBzMNdFdwVdQofl-ESSjZahAcM_-dcZcOMjEeNuymfsuWI?e=YBja5N"  
     },
     {
       title: "Uni Hub Campus Connect",
@@ -90,6 +92,39 @@ function Projects() {
   ],
   github: "https://github.com/LakshithaSamaranayaka/Art-Gallery-Portfolio",
   live: "https://art-gallery-portfolio-weld.vercel.app/"
+},
+
+   {
+  title: "PlayLog",
+  type: "Individual Project",
+  duration: "Jun 2026 - Present",
+  description:
+    "A premium gaming activity tracking mobile application designed to help gamers manage their game library, view recently played games, track play time, record gaming activities, and display profile statistics in one modern dark-themed app. The app is inspired by gaming platforms and focuses on a premium mobile user experience.",
+  features: [
+    "Premium dark gaming mobile UI inspired by console companion apps.",
+    "Home dashboard with recently played games and gaming activity summary",
+    "Game library page with responsive grid-style game cards.",
+    "Game library page with responsive grid-style game cards.",
+    "Add Game form to manually add games into the library.",
+    "Activity feed to display trophies, progress updates, and recent actions.",
+    "Gamer profile page with avatar, trophies, statistics, and recently played games.",
+    "Bottom tab navigation for smooth mobile screen switching.",
+    "Reusable components for game cards, statistics, profile sections, and activity items.",
+    "React Context state management for sharing game data across screens.",
+    "Planned Firebase Authentication and Firestore database integration.",
+  ],
+  tech: [
+    "React Native",
+    "Expo",
+    "Expo Router",
+    "JavaScript",
+    "React Context API",
+    "Expo Linear Gradient",
+    "Expo Vector Icons",
+    "Firebase",
+    "GitHub",
+  ],
+  github: "https://github.com/LakshithaSamaranayaka/PlayLog-mobile-app",
 },
   ];
 
@@ -156,6 +191,16 @@ function Projects() {
             >
               View Source Code →
             </a>
+
+            {project.researchpaper && (
+            <a
+              href={project.researchpaper}
+              target="_blank"
+              className="flex items-center text-purple-400 font-semibold hover:text-purple-300 w-fit"
+            >
+              View Research Paper →
+            </a>
+             )}
 
             {project.live && (
               <a

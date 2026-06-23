@@ -48,8 +48,8 @@ function About() {
             {/* Buttons */}
             <div className="about-buttons mt-8 flex flex-wrap gap-4">
               <a
-                href="/Lakshitha_Samaranayaka_CV.pdf"
-                download
+                href="/LAKSHITHA SAMARANAYAKA .pdf"
+                download="Lakshitha_Samaranayaka.pdf"
                 className="rounded-lg bg-purple-600 px-6 py-3 text-sm font-bold text-white shadow-[0_0_25px_rgba(168,85,247,0.45)] transition hover:bg-purple-700 hover:scale-105"
               >
                 Download CV
