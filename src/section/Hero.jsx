@@ -1,22 +1,51 @@
 import backgroundImage from "../assets/background.jpg";
+import { useEffect, useRef } from "react";
+import Typed from "typed.js";
+
 function Hero() {
+   
+  const typedRef = useRef(null);
+
+useEffect(() => {
+  const typed = new Typed(typedRef.current, {
+    strings: [
+      "Fullstack Developer",
+      "MERN Stack Developer",
+      "Software Engineer",
+      "Backend Developer",
+    ],
+    typeSpeed: 70,
+    backSpeed: 40,
+    backDelay: 1800,
+    loop: true,
+    showCursor: true,
+    cursorChar: "|",
+  });
+
+  return () => {
+    typed.destroy();
+  };
+}, []);
+
   return (
     <section
-         className="min-h-screen flex items-center bg-cover bg-center bg-no-repeat px-6 pt-24"
+         className="relative min-h-[100vh] flex items-center bg-cover bg-center bg-no-repeat px-8 pt-26 overflow-hidden"
   style={{
     backgroundImage: `linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), url(${backgroundImage})`,
   }}
 >
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center w-full">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center w-full -mt-20">
         {/* Left Content */}
         <div>
-          <p className="text-purple-400 font-semibold mb-4">
+          <p className="text-purple-400 font-semibold mt-15">
             Software Engineering Undergraduate
           </p>
 
-          <h1 className="hero-title text-5xl md:text-7xl font-bold">Fullstack{" "}
-            <span className="text-purple-400">
-               Developer
+          <h1 className="hero-title text-2xl md:text-2xl font-bold">
+            <span 
+               ref={typedRef}
+               className="bg-gradient-to-r text-6xl from-white via-purple-300 to-purple-500 bg-clip-text text-transparent">
+               
             </span>
           </h1>
 
@@ -96,6 +125,7 @@ console.log("Ready to contribute 🚀");`}</code>
           </div>
         </div>
       </div>
+      <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-b from-transparent via-black/20 to-[#050816] pointer-events-none"></div>
     </section>
   );
 }

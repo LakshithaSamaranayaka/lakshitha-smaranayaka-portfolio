@@ -2,7 +2,7 @@ import profileImage from "../assets/profile.jpg";
 
 function About() {
   return (
-    <section className="relative min-h-screen overflow-hidden px-6 py-24" id="about">
+    <section className="relative mt-10 min-h-screen overflow-hidden px-6 pt40 pb-24">
       {/* Background glow */}
       <div className="absolute inset-0 -z-10">
         <div className="about-glow-left absolute left-10 top-32 h-72 w-72 rounded-full bg-purple-600/25 blur-[120px]"></div>
